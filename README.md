@@ -2,6 +2,8 @@
 
 <https://jsr.io/@nrfcloud/aws-iam-authenticated-api-gateway-fetch>
 
+Helper function to use fetch against IAM authenticated APIs.
+
 ## Install with NPM
 
 ```bash

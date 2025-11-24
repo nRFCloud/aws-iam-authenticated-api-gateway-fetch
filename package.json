@@ -1,7 +1,7 @@
 {
   "name": "@nrfcloud/aws-iam-authenticated-api-gateway-fetch",
   "version": "0.0.0-development",
-  "description": "Retries the given function using a backoff algorithm.",
+  "description": "Helper function to use fetch against IAM authenticated APIs.",
   "homepage": "https://github.com/nrfcloud/aws-iam-authenticated-api-gateway-fetch#readme",
   "bugs": {
     "url": "https://github.com/nrfcloud/aws-iam-authenticated-api-gateway-fetch/issues"
