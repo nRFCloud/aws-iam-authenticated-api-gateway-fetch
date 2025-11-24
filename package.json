@@ -1,0 +1,39 @@
+{
+  "name": "@nrfcloud/aws-iam-authenticated-api-gateway-fetch",
+  "version": "0.0.0-development",
+  "description": "Retries the given function using a backoff algorithm.",
+  "homepage": "https://github.com/nrfcloud/aws-iam-authenticated-api-gateway-fetch#readme",
+  "bugs": {
+    "url": "https://github.com/nrfcloud/aws-iam-authenticated-api-gateway-fetch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrfcloud/aws-iam-authenticated-api-gateway-fetch.git"
+  },
+  "author": "Nordic Semiconductor ASA | nordicsemi.no",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "main": "iamAuthenticatedApiGatewayFetch.ts",
+  "dependencies": {
+    "@aws-crypto/sha256-js": "^5.2.0",
+    "@smithy/protocol-http": "^5.3.5",
+    "@smithy/signature-v4": "^5.3.5",
+    "@smithy/types": "^4.9.0"
+  },
+  "devDependencies": {
+    "@bifravst/prettier-config": "1.1.13",
+    "prettier": "3.6.2"
+  },
+  "prettier": "@bifravst/prettier-config",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "remoteTags": true,
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@sebbo2002/semantic-release-jsr"
+    ]
+  }
+}
