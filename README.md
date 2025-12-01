@@ -7,7 +7,7 @@ Helper function to use fetch against IAM authenticated APIs.
 ## Install with NPM
 
 ```bash
-npx jsr add --save-dev @nrfcloud/aws-iam-authenticated-api-gateway-fetch
+npx jsr add (--save-prod|--save-dev) @nrfcloud/aws-iam-authenticated-api-gateway-fetch
 ```
 
 ## Usage
