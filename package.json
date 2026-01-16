@@ -16,7 +16,7 @@
   "main": "iamAuthenticatedApiGatewayFetch.ts",
   "dependencies": {
     "@aws-crypto/sha256-js": "^5.2.0",
-    "@smithy/protocol-http": "^5.3.7",
+    "@smithy/protocol-http": "^5.3.8",
     "@smithy/signature-v4": "^5.3.7",
     "@smithy/types": "^4.11.0"
   },
