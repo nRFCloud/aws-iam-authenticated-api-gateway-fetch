@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@bifravst/prettier-config": "1.1.17",
-    "prettier": "3.8.0"
+    "prettier": "3.8.1"
   },
   "prettier": "@bifravst/prettier-config",
   "release": {
