@@ -13,7 +13,26 @@
   "author": "Nordic Semiconductor ASA | nordicsemi.no",
   "license": "BSD-3-Clause",
   "type": "module",
-  "main": "iamAuthenticatedApiGatewayFetch.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./npm/export.d.ts",
+        "default": "./npm/export.js"
+      }
+    }
+  },
+  "files": [
+    "npm",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node --no-warnings --experimental-transform-types --test \"./.npm/*.spec.ts\"",
+    "prepare": "case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
+    "prepublishOnly": "node --experimental-strip-types ./.npm/compile.ts && npx tsc -P ./.npm/tsconfig.npm.json --outDir ./npm"
+  },
   "dependencies": {
     "@aws-crypto/sha256-js": "^5.2.0",
     "@smithy/protocol-http": "^5.5.16",
@@ -22,6 +41,9 @@
   },
   "devDependencies": {
     "@bifravst/prettier-config": "1.1.17",
+    "@swc/core": "1.15.47",
+    "@types/node": "25.9.5",
+    "@typescript/native": "npm:typescript@7.0.2",
     "check-node-version": "4.2.1",
     "prettier": "3.9.6"
   },
@@ -34,13 +56,17 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@sebbo2002/semantic-release-jsr"
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "successCommentCondition": false,
+          "failCommentCondition": false
+        }
+      ]
     ]
   },
   "engines": {
     "npm": ">=12.0.2 <13"
-  },
-  "scripts": {
-    "prepare": "case \"$npm_command\" in install|ci) check-node-version --package ;; esac"
   }
 }
