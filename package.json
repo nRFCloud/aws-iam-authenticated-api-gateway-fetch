@@ -30,7 +30,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "node --no-warnings --experimental-transform-types --test \"./.npm/*.spec.ts\"",
+    "test": "node --no-warnings --test \"./.npm/*.spec.ts\"",
     "prepare": "case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
     "prepublishOnly": "node --experimental-strip-types ./.npm/compile.ts && npx tsc -P ./.npm/tsconfig.npm.json --outDir ./npm"
   },
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@bifravst/prettier-config": "2.0.4",
     "@swc/core": "1.16.20",
-    "@types/node": "25.9.9",
+    "@types/node": "26.6.5",
     "@typescript/native": "npm:typescript@7.0.2",
     "check-node-version": "4.2.1",
     "prettier": "3.9.10"
